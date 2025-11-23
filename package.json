@@ -4,13 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "generate-metadata": "node scripts/generate-guide-metadata.js",
+    "build": "npm run generate-metadata && next build",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --check --ignore-path .gitignore .",
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@dagrejs/dagre": "^2.0.0",
+    "@xyflow/react": "^12.9.3",
+    "html2pdf.js": "^0.12.1",
     "lucide-react": "^0.554.0",
     "next": "14.0.1",
     "react": "^18",
@@ -36,6 +40,7 @@
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.6",
     "raw-loader": "^4.0.2",
+    "simple-git": "^3.30.0",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }

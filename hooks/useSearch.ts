@@ -6,12 +6,29 @@ export const useSearch = () => {
   const [results, setResults] = useState<SearchResult[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const debounceTimerRef = useRef<NodeJS.Timeout>()
-  const indexRef = useRef<ReturnType<typeof buildSearchIndex> | null>(null)
+  const indexRef = useRef<Awaited<ReturnType<typeof buildSearchIndex>> | null>(null)
 
   // Initialize search index on mount
   useEffect(() => {
+    let isMounted = true
+
+    const initializeIndex = async () => {
+      try {
+        const index = await buildSearchIndex()
+        if (isMounted) {
+          indexRef.current = index
+        }
+      } catch (error) {
+        console.error("Error building search index:", error)
+      }
+    }
+
     if (!indexRef.current) {
-      indexRef.current = buildSearchIndex()
+      initializeIndex()
+    }
+
+    return () => {
+      isMounted = false
     }
   }, [])
 

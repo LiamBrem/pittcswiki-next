@@ -7,6 +7,7 @@ import { promises as fs } from "fs"
 import Markdown from "react-markdown"
 import { GetFolderInformation } from "@/utils/guides-page-helper"
 import { getGuideStatus } from "@/config/newGuides"
+import { loadGuideMetadataServer, GuideMetadata } from "@/utils/guide-metadata"
 
 export type FileTitlesType = {
   title: string
@@ -35,6 +36,18 @@ export default async function GuidePage({
 
     const fileFrontMatter = getMDFrontMatter(curFile)
 
+    // Extract guide ID for metadata lookup
+    const guideId = `guide-${curPath.replace(/\.(md|mdx)$/, "")}`
+
+    // Load metadata if available
+    let metadata = undefined
+    try {
+      const allMetadata = await loadGuideMetadataServer()
+      metadata = allMetadata[guideId]
+    } catch (error) {
+      console.error("Error loading guide metadata:", error)
+    }
+
     return (
       <WikiArticle
         file={curFile}
@@ -42,6 +55,7 @@ export default async function GuidePage({
         frontmatter={fileFrontMatter}
         gitAuthorTime=""
         lastUpdatedString=""
+        metadata={metadata}
       />
     )
   }

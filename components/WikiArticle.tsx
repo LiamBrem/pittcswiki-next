@@ -4,7 +4,10 @@ import TableOfContents from "./TableOfContents"
 import RelatedGuides from "./RelatedGuides"
 import FeedbackWidget from "./FeedbackWidget"
 import EditOnGithub from "./EditOnGithub"
+import SocialShare from "./SocialShare"
+import ExportPDFButton from "./ExportPDFButton"
 import { MDFrontMatterType } from "@/utils/frontmatter-parser"
+import { GuideMetadata, formatDate } from "@/utils/guide-metadata"
 import Markdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 import rehypeRaw from "rehype-raw"
@@ -15,6 +18,7 @@ type WikiArticleProps = {
   frontmatter: MDFrontMatterType
   gitAuthorTime: string
   lastUpdatedString: string
+  metadata?: GuideMetadata
 }
 
 export type HeadingType = {
@@ -28,6 +32,7 @@ const WikiArticle = ({
   frontmatter,
   gitAuthorTime,
   lastUpdatedString,
+  metadata,
 }: WikiArticleProps) => {
   let startIndex = file.indexOf("---", 2)
   let relevantContent = file.slice(startIndex, -1)
@@ -49,20 +54,58 @@ const WikiArticle = ({
   return (
     <>
       <TableOfContents headings={headingsArray} />
-      <Breadcrumb slug={path} />
-      <div className="blog-post-container">
-        <div className="blog-post mb-8">
-          <div className="frontmatter">
-            <h1 className="title">{frontmatter.title}</h1>
-            {frontmatter.author && (
-              <i className="sub-title">{frontmatter.author}</i>
+      <div className="article-container">
+        <Breadcrumb slug={path} />
+        <article className="article-content-wrapper">
+          <header className="article-header">
+            <div className="frontmatter">
+              <h1 className="article-title">{frontmatter.title}</h1>
+              {frontmatter.author && (
+                <i className="sub-title">{frontmatter.author}</i>
+              )}
+            </div>
+            {metadata && (
+              <div className="article-meta">
+                <div className="flex flex-nowrap items-center gap-2 md:gap-6 text-xs md:text-sm text-gray-600 dark:text-gray-300">
+                  <div className="flex items-center gap-1 md:gap-2 whitespace-nowrap">
+                    <span className="font-semibold hidden sm:inline">Written by:</span>
+                    <span>{metadata.originalAuthor || metadata.author}</span>
+                  </div>
+                  {metadata.updaters && metadata.updaters.length > 0 && (
+                    <>
+                      <span className="hidden sm:inline text-gray-400">•</span>
+                      <div className="flex items-center gap-1 md:gap-2 whitespace-nowrap">
+                        <span className="font-semibold hidden sm:inline">Updated by:</span>
+                        <span>{metadata.updaters.join(", ")}</span>
+                      </div>
+                    </>
+                  )}
+                  <span className="hidden sm:inline text-gray-400">•</span>
+                  <div className="flex items-center gap-1 md:gap-2 whitespace-nowrap">
+                    <span className="hidden sm:inline">Published</span>
+                    <span>{formatDate(metadata.created)}</span>
+                  </div>
+                  <span className="hidden sm:inline text-gray-400">•</span>
+                  <div className="flex items-center gap-2 whitespace-nowrap flex-shrink-0">
+                    <span>{metadata.readingTime} min</span>
+                    <span className="hidden sm:inline text-gray-400">•</span>
+                    <ExportPDFButton
+                      title={frontmatter.title}
+                      author={metadata.originalAuthor || metadata.author}
+                      publishDate={formatDate(metadata.created)}
+                      contentSelector=".blog-post-content"
+                    />
+                  </div>
+                </div>
+              </div>
             )}
-          </div>
+          </header>
           <FreshnessDisclaimer lastUpdated={gitAuthorTime} />
-          <div className="mt-4 blog-post-content">
+          <div className="blog-post-content">
             <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{relevantContent}</Markdown>
           </div>
           <RelatedGuides related={frontmatter.related} />
+          <SocialShare title={frontmatter.title} />
           <div className={"my-8 sm:w-full md:w-auto"}>
             <FeedbackWidget />
           </div>
@@ -74,7 +117,7 @@ const WikiArticle = ({
               </div>
             )}
           </div>
-        </div>
+        </article>
       </div>
     </>
   )
