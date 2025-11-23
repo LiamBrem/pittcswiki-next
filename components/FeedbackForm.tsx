@@ -43,10 +43,19 @@ const FeedbackForm = ({ setFormState, show }: FeedbackFormProps) => {
         sentiment,
         location: window.location.href,
       }),
-    }).then(() => {
-      setSending(false)
-      setFormState(FeedbackStates.THANK_YOU)
     })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+        setSending(false)
+        setFormState(FeedbackStates.THANK_YOU)
+      })
+      .catch((error) => {
+        console.error("Feedback submission failed:", error)
+        setSending(false)
+        setFormState(FeedbackStates.ERROR)
+      })
   }
 
   return (

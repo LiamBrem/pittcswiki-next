@@ -42,6 +42,8 @@ export const exportGuideToPDF = async (options: PDFExportOptions) => {
   }
 
   // Add content
+  // Note: content is from sanitized markdown rendering (rehypeRaw is not used),
+  // so innerHTML is safe here as it only contains safe HTML tags from react-markdown
   const contentElement = document.createElement("div")
   contentElement.innerHTML = content
   contentElement.style.fontSize = "12px"

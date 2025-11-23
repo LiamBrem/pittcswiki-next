@@ -10,7 +10,6 @@ import { MDFrontMatterType } from "@/utils/frontmatter-parser"
 import { GuideMetadata, formatDate } from "@/utils/guide-metadata"
 import Markdown from "react-markdown"
 import remarkGfm from "remark-gfm"
-import rehypeRaw from "rehype-raw"
 import rehypeSlug from "rehype-slug"
 
 type WikiArticleProps = {
@@ -100,7 +99,7 @@ const WikiArticle = ({
           </header>
           <FreshnessDisclaimer lastUpdated={gitAuthorTime} />
           <div className="blog-post-content">
-            <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSlug, rehypeRaw]}>{relevantContent}</Markdown>
+            <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeSlug]}>{relevantContent}</Markdown>
           </div>
           <RelatedGuides related={frontmatter.related} />
           <SocialShare title={frontmatter.title} />

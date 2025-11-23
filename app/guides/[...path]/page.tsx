@@ -4,6 +4,7 @@ import WikiArticle from "@/components/WikiArticle"
 import { notFound } from "next/navigation"
 import { sortStrings } from "@/utils/sort-strings"
 import { promises as fs } from "fs"
+import path from "path"
 import Markdown from "react-markdown"
 import { GetFolderInformation } from "@/utils/guides-page-helper"
 import { getGuideStatus } from "@/config/newGuides"
@@ -21,15 +22,19 @@ export default async function GuidePage({
 }) {
   const curPath = decodeURIComponent(params.path.join("/"))
 
+  // Validate path to prevent directory traversal attacks
+  const safeBasePath = path.resolve(process.cwd(), "data/guides")
+  const safePath = path.resolve(safeBasePath, curPath)
+  if (!safePath.startsWith(safeBasePath + path.sep)) {
+    notFound()
+  }
+
   // Render the file
   if (curPath.includes(".md")) {
     // Import file
     let curFile = null
     try {
-      curFile = await fs.readFile(
-        process.cwd() + `/data/guides/${curPath}`,
-        "utf-8"
-      )
+      curFile = await fs.readFile(safePath, "utf-8")
     } catch (e) {
       notFound()
     }
@@ -64,10 +69,12 @@ export default async function GuidePage({
   // Based on the name, dynamically import the index.md file for it
   let pageIndexFile
   try {
-    pageIndexFile = await fs.readFile(
-      process.cwd() + `/data/guides/${curPath}/index.md`,
-      "utf-8"
-    )
+    const indexPath = path.resolve(safePath, "index.md")
+    // Ensure the index file is still within the allowed directory
+    if (!indexPath.startsWith(safeBasePath + path.sep)) {
+      notFound()
+    }
+    pageIndexFile = await fs.readFile(indexPath, "utf-8")
   } catch (e) {
     notFound()
   }

@@ -495,13 +495,17 @@
     "authorEmail": "sjj27@pitt.edu",
     "originalAuthor": "Steven Jarmell",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": [],
-    "updaterEmails": [],
+    "updaters": [
+      "Shreyash Ranjan"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
-    "wordCount": 102,
+    "wordCount": 110,
     "readingTime": 1,
-    "commits": 2
+    "commits": 3
   },
   "guide-skills/getting-started-with-x/c++": {
     "path": "skills/getting-started-with-x/c++",
