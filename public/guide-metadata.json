@@ -279,13 +279,17 @@
     "authorEmail": "sjj27@pitt.edu",
     "originalAuthor": "Steven Jarmell",
     "originalAuthorEmail": "sjj27@pitt.edu",
-    "updaters": [],
-    "updaterEmails": [],
+    "updaters": [
+      "Shreyash Ranjan"
+    ],
+    "updaterEmails": [
+      "56934841+codingshreyash@users.noreply.github.com"
+    ],
     "lastModified": "2023-11-28T19:56:49.000Z",
     "created": "2023-11-28T19:56:49.000Z",
     "wordCount": 862,
     "readingTime": 5,
-    "commits": 2
+    "commits": 3
   },
   "guide-career/career-fair": {
     "path": "career/career-fair",
@@ -409,7 +413,7 @@
     "created": "2025-11-23T15:30:42.000Z",
     "wordCount": 753,
     "readingTime": 4,
-    "commits": 1
+    "commits": 2
   },
   "guide-career/study-plan": {
     "path": "career/study-plan",
@@ -455,17 +459,17 @@
   },
   "guide-career/working-at-startup": {
     "path": "career/working-at-startup",
-    "author": "Unknown",
-    "authorEmail": "",
-    "originalAuthor": "Unknown",
-    "originalAuthorEmail": "",
+    "author": "Shreyash Ranjan",
+    "authorEmail": "56934841+codingshreyash@users.noreply.github.com",
+    "originalAuthor": "Shreyash Ranjan",
+    "originalAuthorEmail": "56934841+codingshreyash@users.noreply.github.com",
     "updaters": [],
     "updaterEmails": [],
-    "lastModified": "2025-11-23T20:52:52.954Z",
-    "created": "2025-11-23T20:52:52.954Z",
+    "lastModified": "2025-11-23T20:56:03.000Z",
+    "created": "2025-11-23T20:56:03.000Z",
     "wordCount": 1732,
     "readingTime": 9,
-    "commits": 0
+    "commits": 1
   },
   "guide-skills/clubs": {
     "path": "skills/clubs",

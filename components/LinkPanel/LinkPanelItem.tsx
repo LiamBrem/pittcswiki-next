@@ -32,7 +32,7 @@ const LinkPanelItem = ({
 
   return (
     <div
-      className="link-panel-item text-center text-sm text-black dark:text-[#cccccc] hover:cursor-pointer bg-white dark:bg-transparent border border-gray-200 dark:border-gray-700 rounded-lg transition-all duration-300 overflow-hidden focus:outline-2 focus:outline-offset-2 focus:outline-[#FFB81C] flex flex-col h-full w-full md:flex-shrink-0 h-70"
+      className="link-panel-item text-center text-sm text-black dark:text-gray-100 hover:cursor-pointer bg-white dark:bg-transparent border border-gray-200 dark:border-gray-700 rounded-lg transition-all duration-300 overflow-hidden focus:outline-2 focus:outline-offset-2 focus:outline-[#FFB81C] flex flex-col h-64 w-full md:flex-shrink-0"
       style={{
         boxShadow: 'rgba(0, 0, 0, 0.08) 0px 2px 12px, rgba(0, 0, 0, 0.04) 0px 1px 4px'
       }}
@@ -67,7 +67,7 @@ const LinkPanelItem = ({
               <div className="flex justify-center mb-4" style={{height: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                 <IconComponent
                   size={32}
-                  className="text-gray-800 dark:text-[#e0e0e0] ease-in-out duration-300 transition-all"
+                  className="text-gray-800 dark:text-gray-100 ease-in-out duration-300 transition-all"
                   aria-label={iconAlt}
                   role="img"
                 />

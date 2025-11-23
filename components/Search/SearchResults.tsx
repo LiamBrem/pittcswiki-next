@@ -20,7 +20,7 @@ export default function SearchResults({
   if (!query.trim()) return null
 
   return (
-    <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50 max-w-md">
+    <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50 max-w-md">
       {isLoading && (
         <div className="p-4 text-center text-gray-500 dark:text-gray-400 text-sm">
           Searching...

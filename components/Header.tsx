@@ -16,20 +16,24 @@ import ThemeToggle from "./ThemeToggle"
 
 const Header = (): JSX.Element => {
   return (
-    <header className="flex flex-none h-16 px-8 mb-4 bg-pittblue pwiki-header items-center justify-between">
+    <header 
+      className="header flex flex-none mb-4 bg-pittblue pwiki-header items-center justify-between"
+      role="banner"
+    >
       <div className="flex items-center">
         <Link
           className="header-logo flex font-semibold text-white items-center"
           href="/"
+          aria-label="Pitt CS Wiki Home"
         >
           <Image
             src={logo}
-            alt=""
-            className="w-10 md:mr-0 mr-4 max-w-[50px]"
+            alt="Pitt CS Wiki Logo"
+            className="pitt-logo md:mr-0 mr-4"
           />
         </Link>
       </div>
-      <div className="flex items-center gap-3">
+      <div className="header-right flex items-center">
         <Search />
         <ThemeToggle />
       </div>

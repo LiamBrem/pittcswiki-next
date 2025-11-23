@@ -19,11 +19,12 @@ const EditOnGithub = ({ slug, isIndexPage }: EditOnGithubProps) => {
   return (
     <a
       target="_blank"
-      className="text-gray-600 dark:text-gray-400 hidden md:inline hover:text-blue-600 dark:hover:text-blue-400"
+      className="text-gray-600 dark:text-gray-400 hidden md:inline-flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400"
       rel="noopener noreferrer"
       href={gitHubLink}
     >
-      {EditIcon} Edit this page on GitHub
+      {EditIcon}
+      <span>Edit this page on GitHub</span>
     </a>
   )
 }

@@ -83,11 +83,13 @@ export default async function GuidePage({
   return (
     <>
       <Breadcrumb slug={`guides/${curPath}`} />
-      <div className="blog-post-container">
+      <div className={`blog-post-container ${curPath === 'career' ? 'career-page' : ''}`}>
         <div className="blog-post mb-8">
           <div className="frontmatter">
-            <h1 className="title">{indexFileFrontMatter.title}</h1>
-            <Markdown>{relevantContent}</Markdown>
+            <h1 className={`title ${curPath === 'career' ? 'career-title' : ''}`}>{indexFileFrontMatter.title}</h1>
+            <div className={curPath === 'career' ? 'career-description' : ''}>
+              <Markdown>{relevantContent}</Markdown>
+            </div>
             <h3>Guides</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {fileTitles
@@ -104,7 +106,7 @@ export default async function GuidePage({
                     <div key={i} className="guide-card-container">
                       <a
                         href={file.href}
-                        className="w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition hover:text-white hover:bg-gray-600 hover:font-bold hover:shadow-md block"
+                        className="guide-card w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition hover:text-white hover:bg-gray-600 hover:font-bold hover:shadow-md block"
                         aria-label={
                           guideStatus
                             ? `${file.title} (${guideStatus} guide)`

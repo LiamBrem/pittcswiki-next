@@ -17,10 +17,12 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   // Initialize theme from localStorage on client side
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme") as Theme | null;
-    const initialTheme = storedTheme || "light";
+    // Get the current theme from HTML element (set by inline script in layout)
+    const htmlElement = document.documentElement;
+    const isDarkMode = htmlElement.classList.contains("dark");
+    const initialTheme = isDarkMode ? "dark" : "light";
+
     setTheme(initialTheme);
-    applyTheme(initialTheme);
     setMounted(true);
   }, []);
 
@@ -42,11 +44,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     });
   };
 
-  // Prevent rendering until mounted to avoid hydration mismatch
-  if (!mounted) {
-    return <>{children}</>;
-  }
-
+  // Always render with context, use suppressHydrationWarning on html
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
