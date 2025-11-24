@@ -13,7 +13,7 @@ const Footer = (): JSX.Element => {
       <div className="m-auto text-gray-600 dark:text-gray-300">
         © {new Date().getFullYear()}, Built with ❤️ by{" "}
         <Link
-          className="text-gray-800 dark:text-[#fbbf24] font-bold hover:text-blue-600 dark:hover:text-[#fcd34d] transition-colors duration-200"
+          className="text-gray-800 dark:text-[#fbbf24] font-bold hover:text-[#FFB81C] transition-colors duration-200"
           href="https://pittcsc.org"
           target="_blank"
         >
@@ -21,19 +21,19 @@ const Footer = (): JSX.Element => {
         </Link>
         .{` `}
         <p className="mb-0 text-sm">
-          <Link href="/about/" className="mr-2 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-[#fbbf24] transition-colors duration-200">
+          <Link href="/about/" className="mr-2 text-gray-600 dark:text-gray-300 hover:text-[#FFB81C] transition-colors duration-200">
             About
           </Link>
-          <Link href="mailto:pittcsc+wiki@gmail.com" className="mr-2 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-[#fbbf24] transition-colors duration-200">
+          <Link href="mailto:pittcsc+wiki@gmail.com" className="mr-2 text-gray-600 dark:text-gray-300 hover:text-[#FFB81C] transition-colors duration-200">
             Contact
           </Link>
-          <Link href="/sitemap/" className="mr-2 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-[#fbbf24] transition-colors duration-200">
+          <Link href="/sitemap/" className="mr-2 text-gray-600 dark:text-gray-300 hover:text-[#FFB81C] transition-colors duration-200">
             Sitemap
           </Link>
-          <Link href="/feedback/" className="mr-2 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-[#fbbf24] transition-colors duration-200">
+          <Link href="/feedback/" className="mr-2 text-gray-600 dark:text-gray-300 hover:text-[#FFB81C] transition-colors duration-200">
             Feedback
           </Link>
-          <Link href="https://github.com/PittCSWiki/pittcswiki" target="_blank" className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-[#fbbf24] transition-colors duration-200">
+          <Link href="https://github.com/PittCSWiki/pittcswiki" target="_blank" className="text-gray-600 dark:text-gray-300 hover:text-[#FFB81C] transition-colors duration-200">
             GitHub
           </Link>
         </p>

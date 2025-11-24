@@ -16,9 +16,17 @@ function ThemeToggleButton() {
     return <div className="theme-toggle-button-placeholder" />;
   }
 
+  const handleClick = () => {
+    toggleTheme()
+    // Blur the button after click to remove focus outline
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur()
+    }
+  }
+
   return (
     <button
-      onClick={toggleTheme}
+      onClick={handleClick}
       className="theme-toggle-button"
       aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
       title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}

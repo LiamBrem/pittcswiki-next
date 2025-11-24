@@ -1,7 +1,6 @@
 "use client"
 
 import { useRouter } from "next/navigation"
-import Link from "next/link"
 import { BarChart3, Compass, Briefcase, BookOpen, Map, Users } from "lucide-react"
 
 const iconMap = {
@@ -59,7 +58,7 @@ const LinkPanelItem = ({
           transition: 'box-shadow 300ms ease'
         }}
       />
-      <div className="p-6 pt-8 flex flex-col flex-1">
+      <div className="p-6 pt-8 flex flex-col flex-1 pointer-events-none">
         {icon &&
           (() => {
             const IconComponent = iconMap[icon]
@@ -79,13 +78,9 @@ const LinkPanelItem = ({
         <p className="text-xs leading-relaxed mb-3">
           {description}
         </p>
-        <Link
-          href={path}
-          className="inline-block text-[#4A9EFF] dark:text-[#4A9EFF] hover:text-[#6ab8ff] dark:hover:text-[#6ab8ff] font-medium transition-colors duration-300 hover:underline focus:outline-2 focus:outline-offset-2 focus:outline-[#FFB81C] rounded px-1"
-          aria-label={`Learn more about ${title}`}
-        >
+        <span className="inline-block text-[#4A9EFF] dark:text-[#4A9EFF] font-medium">
           Learn more →
-        </Link>
+        </span>
       </div>
     </div>
   )

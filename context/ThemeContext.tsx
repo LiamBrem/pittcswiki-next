@@ -57,7 +57,7 @@ export function useTheme() {
   if (!context) {
     // Return default values during SSR
     return {
-      theme: "light" as Theme,
+      theme: "dark" as Theme,
       toggleTheme: () => {},
     };
   }

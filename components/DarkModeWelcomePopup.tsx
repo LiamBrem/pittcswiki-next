@@ -61,14 +61,14 @@ export default function DarkModeWelcomePopup() {
         <div className="popup-arrow" aria-hidden="true" />
 
         {/* Popup Content */}
-        <div className="bg-white dark:bg-[#2a2a2a] rounded-lg p-4 min-w-[240px] border-2 border-[#FFB81C] shadow-xl">
+        <div className="bg-white dark:bg-[#2a2a2a] rounded-lg p-4 min-w-[200px] max-w-[220px] border-2 border-[#FFB81C] shadow-xl">
           <div className="flex justify-between items-start gap-3">
             <div className="flex-1">
               <h3 className="font-bold text-black dark:text-white text-sm mb-1">
-                Try our new dark mode!
+                The new default is dark mode!
               </h3>
               <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-                Perfect for late-night planning
+                If you&rsquo;d like to switch back to light mode, click the toggle above.
               </p>
             </div>
             <button

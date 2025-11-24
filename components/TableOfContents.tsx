@@ -22,7 +22,7 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
   if (!headings || headings.length < 4) return null
 
   return (
-    <ul className="hidden lg:block fixed lg:left-0 list-none ml-0 markdown-toc">
+    <ul className="hidden lg:block list-none ml-0 markdown-toc">
       {headings.map((heading, i) => {
         const isSectionHeader = heading.depth === 2
         const isSubsection = heading.depth > 2
@@ -33,7 +33,6 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
             className={`font-bold toc-heading-depth-${heading.depth} ${
               isSectionHeader ? 'sidebar-section-header' : ''
             } ${isSubsection ? 'sidebar-subsection' : ''}`}
-            style={{ marginLeft: heading.depth + "rem" }}
           >
             <a
               className={`sidebar-nav-link ${isSectionHeader ? '' : ''}`}

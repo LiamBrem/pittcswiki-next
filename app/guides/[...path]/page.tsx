@@ -113,7 +113,7 @@ export default async function GuidePage({
                     <div key={i} className="guide-card-container">
                       <a
                         href={file.href}
-                        className="guide-card w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition hover:text-white hover:bg-gray-600 hover:font-bold hover:shadow-md block"
+                        className="guide-card w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition-all duration-300 ease-out hover:border-l-4 hover:border-l-[#FFB81C] hover:shadow-md hover:-translate-y-0.5 block"
                         aria-label={
                           guideStatus
                             ? `${file.title} (${guideStatus} guide)`

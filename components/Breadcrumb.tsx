@@ -32,7 +32,7 @@ const Breadcrumb = ({ slug }: BreadcrumbProps) => {
         <span className="mx-1 text-gray-400">/</span>
         <Link
           href={"/" + slugItems.slice(0, i + 1).join("/")}
-          className="hover:text-blue-500 transition-colors"
+          className="hover:text-[#FFB81C] transition-colors duration-200"
         >
           {formattedText}
         </Link>

@@ -53,10 +53,11 @@ const WikiArticle = ({
 
   return (
     <>
-      <TableOfContents headings={headingsArray} />
-      <div className="article-container">
-        <Breadcrumb slug={path} />
-        <article className="article-content-wrapper">
+      <div className="article-layout-wrapper">
+        <TableOfContents headings={headingsArray} />
+        <div className="article-container">
+          <Breadcrumb slug={path} />
+          <article className="article-content-wrapper">
           <header className="article-header">
             <div className="frontmatter">
               <h1 className="article-title">{frontmatter.title}</h1>
@@ -103,10 +104,10 @@ const WikiArticle = ({
           </div>
           <RelatedGuides related={frontmatter.related} />
           <SocialShare title={frontmatter.title} />
-          <div className={"my-8 sm:w-full md:w-auto"}>
+          <div className={"my-4 sm:w-full md:w-auto"}>
             <FeedbackWidget />
           </div>
-          <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400">
+          <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400 mt-8 mb-12">
             <EditOnGithub slug={path} isIndexPage={false} />
             {lastUpdatedString && !lastUpdatedString.includes("Invalid") && (
               <div className="text-right">
@@ -115,6 +116,7 @@ const WikiArticle = ({
             )}
           </div>
         </article>
+        </div>
       </div>
     </>
   )
