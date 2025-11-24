@@ -2061,26 +2061,13 @@ html.dark .theme-toggle-button svg {
 
 /* Breadcrumb Alignment */
 .breadcrumb-nav {
-  max-width: 800px;
-  margin: 0 auto 32px auto; /* Center when used standalone */
-  padding: 0 24px; /* Responsive padding for standalone use */
+  margin: 0 0 32px 0;
+  padding: 0;
   text-align: left;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-/* Responsive padding for breadcrumbs */
-@media (min-width: 768px) {
-  .breadcrumb-nav {
-    padding: 0 40px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .breadcrumb-nav {
-    padding: 0 0;
-  }
-}
 
 /* Override breadcrumb styles when inside article-layout-wrapper */
 .article-layout-wrapper .breadcrumb-nav {
