@@ -623,12 +623,14 @@ blockquote {
 }
 
 .markdown-toc {
-  width: 100%;
+  width: 250px;
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  max-height: calc(100vh - 120px);
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 1rem;
+  position: sticky;
+  top: 100px;
   align-self: flex-start;
   flex-shrink: 0;
 
@@ -2010,12 +2012,18 @@ html.dark .theme-toggle-button svg {
 /* Article Layout - Wrapper for sidebar and content */
 .article-layout-wrapper {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 800px;
+  gap: 3rem;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 24px;
   align-items: flex-start;
+  justify-content: center;
+}
+
+@media (max-width: 1023px) {
+  .article-layout-wrapper {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -2049,7 +2057,8 @@ html.dark .theme-toggle-button svg {
 .article-layout-wrapper .article-container {
   margin: 0; /* Remove auto margins in flex layout */
   padding: 0; /* Padding handled by wrapper */
-  flex: 1; /* Take available space in flex layout */
+  flex: 0 0 800px; /* Fixed width for content centering */
+  max-width: 800px;
 }
 
 /* Breadcrumb Alignment */
