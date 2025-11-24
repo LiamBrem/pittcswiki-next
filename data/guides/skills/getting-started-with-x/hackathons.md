@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with Hackathons"
 author: "Alex Zharichenko"
-updated by: "Brayden Nguyen
+updated by: "Brayden Nguyen"
 ---
 
 ## What is a hackathon?
