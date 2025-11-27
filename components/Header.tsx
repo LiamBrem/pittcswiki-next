@@ -16,7 +16,7 @@ import ThemeToggle from "./ThemeToggle"
 
 const Header = (): JSX.Element => {
   return (
-    <header 
+    <header
       className="header flex flex-none mb-4 bg-pittblue pwiki-header items-center justify-between"
       role="banner"
     >

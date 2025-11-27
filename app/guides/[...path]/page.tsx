@@ -122,11 +122,19 @@ export default async function GuidePage({
   return (
     <>
       <Breadcrumb slug={`guides/${curPath}`} />
-      <div className={`blog-post-container ${curPath === 'career' ? 'career-page' : ''}`}>
+      <div
+        className={`blog-post-container ${
+          curPath === "career" ? "career-page" : ""
+        }`}
+      >
         <div className="blog-post mb-8">
           <div className="frontmatter">
-            <h1 className={`title ${curPath === 'career' ? 'career-title' : ''}`}>{indexFileFrontMatter.title}</h1>
-            <div className={curPath === 'career' ? 'career-description' : ''}>
+            <h1
+              className={`title ${curPath === "career" ? "career-title" : ""}`}
+            >
+              {indexFileFrontMatter.title}
+            </h1>
+            <div className={curPath === "career" ? "career-description" : ""}>
               <Markdown>{relevantContent}</Markdown>
             </div>
             <h3>Guides</h3>

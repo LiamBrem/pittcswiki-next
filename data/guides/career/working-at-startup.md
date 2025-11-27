@@ -9,6 +9,7 @@ Startups offer a unique environment that's fundamentally different from both tra
 ### Internship vs Startup Role
 
 A traditional internship is typically structured with:
+
 - Clear mentorship and learning objectives
 - Defined projects with bounded scope
 - Established processes and guidelines
@@ -16,6 +17,7 @@ A traditional internship is typically structured with:
 - Rotation through different teams or projects
 
 A startup, whether as an intern or full-time employee, is different:
+
 - You're expected to contribute meaningfully from day one
 - Projects are often undefined or constantly evolving
 - You'll wear multiple hats and work across disciplines
@@ -32,6 +34,7 @@ A startup, whether as an intern or full-time employee, is different:
 ### The Big Tech Experience
 
 At companies like Google, Microsoft, Meta, or Amazon:
+
 - Clear career progression and levels
 - Established mentorship programs
 - Well-defined projects with clear requirements
@@ -44,6 +47,7 @@ At companies like Google, Microsoft, Meta, or Amazon:
 ### The Startup Experience
 
 Startups operate very differently:
+
 - **Flat hierarchy:** You might report directly to the CTO or founder. Decision-making is faster but can be chaotic.
 - **Undefined scope:** You might start working on feature X but pivot to feature Y mid-sprint. Flexibility is key.
 - **Autonomy:** You have more independence but also more responsibility. There's less handholding.
@@ -54,42 +58,47 @@ Startups operate very differently:
 
 ### Comparison Table
 
-| Aspect | Big Tech | Startup |
-|--------|----------|---------|
-| Career clarity | Clear levels and progression | Often unclear |
-| Project definition | Well-defined | Evolving, sometimes undefined |
-| Mentorship | Strong programs | Minimal, self-directed |
-| Work-life balance | Varies, but generally manageable | Often long hours |
-| Learning | Deep dives into specialties | Broad exposure to many areas |
-| Stability | Very stable | Highly uncertain |
-| Impact | Part of large systems | Direct, visible impact |
-| Compensation | Very competitive | Often lower (but equity possible) |
+| Aspect             | Big Tech                         | Startup                           |
+| ------------------ | -------------------------------- | --------------------------------- |
+| Career clarity     | Clear levels and progression     | Often unclear                     |
+| Project definition | Well-defined                     | Evolving, sometimes undefined     |
+| Mentorship         | Strong programs                  | Minimal, self-directed            |
+| Work-life balance  | Varies, but generally manageable | Often long hours                  |
+| Learning           | Deep dives into specialties      | Broad exposure to many areas      |
+| Stability          | Very stable                      | Highly uncertain                  |
+| Impact             | Part of large systems            | Direct, visible impact            |
+| Compensation       | Very competitive                 | Often lower (but equity possible) |
 
 ## Why Work at a Startup?
 
 ### Reasons to consider a startup:
 
 **1. Learning and Growth**
+
 - You'll learn faster by doing more and solving diverse problems
 - You'll understand how entire products and companies work, not just one component
 - You'll gain skills in areas you didn't expect (product thinking, business acumen, cross-functional collaboration)
 
 **2. Direct Impact**
+
 - Your work matters. You can see the results of your coding in production within hours
 - You're building something from the ground up, not maintaining legacy systems
 - You can influence product direction and company decisions
 
 **3. Equity**
+
 - Many startups offer stock options or equity grants
 - If the company succeeds, this can be extremely valuable
 - It's a way to share in the company's upside
 
 **4. Resume Building**
+
 - Employers love to see early-stage startup experience
 - It demonstrates resourcefulness, adaptability, and initiative
 - You can claim credit for significant features or systems
 
 **5. Network**
+
 - Early-stage startups often have tight-knit teams that become lifelong networks
 - You'll interact with founders, investors, and other entrepreneurs
 - These relationships can lead to future opportunities
@@ -97,21 +106,25 @@ Startups operate very differently:
 ### Reasons to be cautious:
 
 **1. Uncertainty**
+
 - The company might fail. Startups have a high failure rate
 - Your role and responsibilities might change constantly
 - Job security is uncertain
 
 **2. Burnout**
+
 - Startup culture can glorify long hours and grinding
 - You might be expected to do the work of 2-3 people
 - Without clear boundaries, it's easy to overcommit
 
 **3. Limited Learning Structure**
+
 - You might learn bad practices if there's no one to mentor you
 - You could miss out on deep technical knowledge in your specialty
 - Without established best practices, you might form poor habits
 
 **4. Compensation**
+
 - Salary is often lower than big tech
 - Equity might be worthless if the company fails
 - Benefits are usually minimal
@@ -121,6 +134,7 @@ Startups operate very differently:
 ### Where to Find Startups
 
 **1. Job boards and listings**
+
 - **AngelList (Wellfound)** - The primary startup job board. Browse by industry, funding stage, and location
 - **Y Combinator's job board** - YC-backed companies (highly vetted)
 - **Crunchbase** - Find companies by funding stage, industry, and investor
@@ -128,12 +142,14 @@ Startups operate very differently:
 - **Handshake** - Pitt's job board has startup listings
 
 **2. Networking**
+
 - **Attend startup events** - Pitch competitions, startup showcases, tech meetups
 - **Connect with founders on LinkedIn** - Many founders actively recruit on LinkedIn
 - **Pitt entrepreneurship community** - Talk to fellow students launching companies
 - **Accelerators and incubators** - Many are actively hiring
 
 **3. Cold outreach**
+
 - Find startups you're interested in via Crunchbase or news
 - Identify engineers or the CTO on LinkedIn
 - Send a thoughtful message explaining why you're interested in their mission
@@ -144,30 +160,35 @@ Startups operate very differently:
 Before committing, evaluate these factors:
 
 **1. The Product**
+
 - Does it solve a real problem?
 - Who are the customers?
 - Is there demand or traction?
 - Can you get excited about it?
 
 **2. The Team**
+
 - What's the background of the founders? (Previous startups? Corporate experience?)
 - Do they have a technical co-founder?
 - Is the team passionate about the problem?
 - Will you respect and learn from these people?
 
 **3. Funding and Runway**
+
 - How much money do they have? (This affects job security)
 - How long can they operate with current burn rate?
 - Have they raised from reputable investors?
 - Is there a path to profitability or additional funding?
 
 **4. Your Role**
+
 - What will you actually be doing?
 - Are responsibilities clear or very vague?
 - Will you have mentorship or will you be learning on your own?
 - Is the scope reasonable or are they expecting 5 people's work from you?
 
 **5. Culture and Expectations**
+
 - What's the expected work schedule?
 - Do they value work-life balance or glorify grinding?
 - What's the equity arrangement? (This matters for co-founders and early employees)
@@ -187,36 +208,43 @@ Before committing, evaluate these factors:
 ## Tips for Success at a Startup
 
 ### 1. Be proactive
+
 - Don't wait for directions. Identify problems and solve them
 - Ask for feedback frequently
 - Take initiative on tasks beyond your job description
 
 ### 2. Communicate clearly
+
 - Over-communicate with your team
 - Write things down (docs, Slack threads) because context is easy to lose
 - Ask questions if requirements are unclear
 
 ### 3. Embrace change
+
 - Plans will change. Projects will pivot. Get comfortable with it
 - View it as a learning opportunity, not a frustration
 - Be flexible in your role and responsibilities
 
 ### 4. Prioritize ruthlessly
+
 - You can't do everything. Focus on what moves the needle
 - Ask your manager/founder: "What's most important right now?"
 - Say no to low-impact work
 
 ### 5. Document what you do
+
 - Keep a record of your achievements and impact
 - This will be valuable for future job applications or equity negotiations
 - Helps the team understand what happened if people turn over
 
 ### 6. Set boundaries
+
 - It's easy to work 60-hour weeks at a startup
 - Be intentional about your work-life balance
 - Burnout helps no one (especially not the startup)
 
 ### 7. Learn the business
+
 - Understanding the market, customers, and business model makes you better at your job
 - Ask founders about strategy and metrics
 - Think about the product from a customer and business perspective
@@ -224,24 +252,28 @@ Before committing, evaluate these factors:
 ## Resources
 
 ### Startup Job Boards
+
 - **AngelList (Wellfound)** - https://wellfound.com/
 - **Y Combinator Job Board** - https://www.ycombinator.com/jobs
 - **Crunchbase** - https://www.crunchbase.com/
 - **LinkedIn** - Filter by company size
 
 ### Learning About Startups
+
 - **Lean Startup** by Eric Ries - Classic book on startup methodology
 - **The Hard Thing About Hard Things** by Ben Horowitz - Founders' perspective on challenges
 - **Crunchbase News** - Industry news and funding announcements
 - **Startup podcasts** - How I Built This, The Podium, etc.
 
 ### Pitt Resources
+
 - **Pitt Innovation Institute** - https://innovation.pitt.edu/
 - **Business Plan Competition** - Network with student entrepreneurs
 - **Handshake** - Pitt's job platform with startup listings
 - **Career Services** - For startup-specific career advising
 
 ### Networking
+
 - **Startup events in Pittsburgh** - AlliancePittsburgh, TechCrunch Disrupt, local pitch competitions
 - **Meetup.com** - Find local startup and tech groups
 - **Twitter/X** - Follow founders, VCs, and startup communities

@@ -23,7 +23,10 @@ const nextConfig = {
     config.resolve.alias = {
       ...config.resolve.alias,
       "@dagrejs/graphlib": "@dagrejs/graphlib",
-      "@dagrejs/dagre": path.resolve(__dirname, "node_modules/@dagrejs/dagre/dist/dagre.js"),
+      "@dagrejs/dagre": path.resolve(
+        __dirname,
+        "node_modules/@dagrejs/dagre/dist/dagre.js"
+      ),
     }
 
     return config
