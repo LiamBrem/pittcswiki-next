@@ -124,9 +124,8 @@ export default async function GuidePage({
     <>
       <Breadcrumb slug={`guides/${curPath}`} />
       <div
-        className={`blog-post-container ${
-          curPath === "career" ? "career-page" : ""
-        }`}
+        className={`blog-post-container ${curPath === "career" ? "career-page" : ""
+          }`}
       >
         <div className="blog-post mb-8">
           <div className="frontmatter">
@@ -154,7 +153,7 @@ export default async function GuidePage({
                     <div key={i} className="guide-card-container">
                       <a
                         href={file.href}
-                        className="guide-card w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition-all duration-300 ease-out hover:border-l-4 hover:border-l-[#243e8b] dark:hover:border-l-[#FFB81C] hover:text-[#243e8b] dark:hover:text-[#FFB81C] hover:shadow-md hover:-translate-y-0.5 block focus:outline-none"
+                        className="guide-card w-full h-32 p-4 border text-gray-800 bg-gray-200 shadow-sm transition-all duration-300 ease-out hover:border-l-4 hover:border-l-[#243e8b] hover:text-[#243e8b] hover:shadow-md hover:-translate-y-0.5 block focus:outline-none"
                         aria-label={
                           guideStatus
                             ? `${file.title} (${guideStatus} guide)`

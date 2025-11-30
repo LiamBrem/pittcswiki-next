@@ -32,7 +32,7 @@ const nextConfig = {
     return config
   },
   experimental: {
-    webpackBuildWorker: true,
+    // webpackBuildWorker: true,
   },
 }
 
