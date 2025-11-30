@@ -6,6 +6,7 @@ import { sortStrings } from "@/utils/sort-strings"
 import { promises as fs } from "fs"
 import path from "path"
 import Markdown from "react-markdown"
+import rehypeRaw from "rehype-raw"
 import { GetFolderInformation } from "@/utils/guides-page-helper"
 import { getGuideStatus } from "@/config/newGuides"
 import { loadGuideMetadataServer, GuideMetadata } from "@/utils/guide-metadata"
@@ -123,9 +124,8 @@ export default async function GuidePage({
     <>
       <Breadcrumb slug={`guides/${curPath}`} />
       <div
-        className={`blog-post-container ${
-          curPath === "career" ? "career-page" : ""
-        }`}
+        className={`blog-post-container ${curPath === "career" ? "career-page" : ""
+          }`}
       >
         <div className="blog-post mb-8">
           <div className="frontmatter">
@@ -135,7 +135,7 @@ export default async function GuidePage({
               {indexFileFrontMatter.title}
             </h1>
             <div className={curPath === "career" ? "career-description" : ""}>
-              <Markdown>{relevantContent}</Markdown>
+              <Markdown rehypePlugins={[rehypeRaw]}>{relevantContent}</Markdown>
             </div>
             <h3>Guides</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
