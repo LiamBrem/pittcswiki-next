@@ -3,6 +3,7 @@ import RequirementsListing from "../Requirement/RequirementsListing"
 import TermPills from "./TermPill"
 import Link from "next/link"
 import { TermsOfferedType } from "@/types/CoursesDataType"
+import rmpRatings from "@/data/rmp-ratings.json"
 
 interface CourseRequirements {
   [key: string]: {
@@ -36,7 +37,43 @@ const CourseQuickViewContent = ({
       {instructors && instructors.length > 0 && (
         <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">
           <span className="font-semibold">Current Professor:</span>{" "}
-          {instructors.join(", ")}
+          {instructors.map((instructor, i) => {
+            const rating = (rmpRatings as any)[instructor]
+
+            let colorClass =
+              "hover:underline hover:text-[#243e8b] dark:hover:text-[#ffb81c] transition-colors"
+            if (rating) {
+              if (rating.avgRating >= 4.0) {
+                colorClass =
+                  "text-green-600 dark:text-green-400 hover:underline font-bold"
+              } else if (rating.avgRating >= 3.0) {
+                colorClass =
+                  "text-yellow-600 dark:text-yellow-400 hover:underline font-bold"
+              } else {
+                colorClass =
+                  "text-red-600 dark:text-red-400 hover:underline font-bold"
+              }
+            }
+
+            return (
+              <span key={instructor}>
+                {i > 0 && ", "}
+                {rating ? (
+                  <a
+                    href={`https://www.ratemyprofessors.com/professor/${rating.legacyId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={colorClass}
+                    title={`${rating.numRatings} ratings`}
+                  >
+                    {instructor} ({rating.avgRating})
+                  </a>
+                ) : (
+                  instructor
+                )}
+              </span>
+            )
+          })}
         </p>
       )}
       {terms_offered && <TermPills termsMap={terms_offered} />}

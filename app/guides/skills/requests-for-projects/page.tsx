@@ -15,7 +15,7 @@ type ProjectIdea = {
 }
 
 const ProjectItem = ({ title, description, tags, formLink }: ProjectIdea) => (
-  <div className="mb-8 border-b border-gray-200 dark:border-gray-800 pb-8 last:border-0 hover:bg-gray-50 dark:hover:bg-gray-900/50 -mx-4 px-4 py-6 rounded-2xl transition-all duration-200">
+  <div className="mb-8 border border-transparent border-b-gray-200 dark:border-b-gray-800 pb-8 last:border-0 hover:bg-gray-50 dark:hover:bg-transparent dark:hover:border-[#ffb81c] -mx-4 px-4 py-6 rounded-2xl transition-all duration-200">
     <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
       {title}
     </h3>
@@ -190,7 +190,7 @@ export default function RequestsForProjectsPage() {
             href="https://forms.google.com/your-submission-form-url" // TODO: Replace with actual submission form
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[#ffb81c] text-[#243e8b] font-bold text-lg px-8 py-3 rounded-full hover:bg-yellow-300 transition-transform transform hover:-translate-y-1 hover:shadow-lg"
+            className="inline-block bg-[#ffb81c] text-[#243e8b] dark:text-[#243e8b] font-bold text-lg px-8 py-3 rounded-full hover:bg-[#ffc840] transition-transform transform hover:-translate-y-1 hover:shadow-lg"
           >
             Submit an Idea
           </a>
