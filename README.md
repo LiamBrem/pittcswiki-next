@@ -2,7 +2,7 @@
 
 A modern, community-driven knowledge platform for University of Pittsburgh Computer Science students. This resource provides comprehensive guides on academics, careers, technical skills, and student life.
 
-**[Live Website](https://pittcswiki.com)** | **[Report Issues](https://github.com/pittcsc/pittcswiki-next/issues)** | **[Contributing Guide](docs/contributing.md)**
+**[Live Website](https://pittcs.wiki)** | **[Report Issues](https://github.com/pittcsc/pittcswiki-next/issues)** | **[Contributing Guide](docs/contributing.md)**
 
 ## About
 
