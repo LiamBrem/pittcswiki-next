@@ -1,7 +1,7 @@
 import Breadcrumb from "@/components/Breadcrumb"
 
 export const metadata = {
-  title: "Projects We're Working On | Pitt CSC",  
+  title: "Projects We're Working On | Pitt CSC",
   description: "Active DevLab projects that Pitt CSC students are building.",
 }
 
@@ -61,14 +61,24 @@ export default function ProjectsWereWorkingOnPage() {
       description:
         "Building the future of DevLab's knowledge sharing, Pittfluence is an open-source documentation platform inspired by Confluence. Designed to give organizations a powerful, self-hosted Single Source of Truth repository for docs, meetings notes, and other institutional knowledge, this app will be a tool that any Pitt club or organization can deploy to preserve their work across graduating classes and teams.",
       tags: ["Documentation", "Knowledge Base", "Open Source", "React"],
-      formLink: "https://docs.google.com/forms/d/e/1FAIpQLSeHj91HPT_wQV0j4Ho8NjFXjCte_Vy2JwKWtZr8J-DE5JfYMg/viewform?usp=sharing&ouid=104601442510228100749",
+      formLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSeHj91HPT_wQV0j4Ho8NjFXjCte_Vy2JwKWtZr8J-DE5JfYMg/viewform?usp=sharing&ouid=104601442510228100749",
     },
     {
       title: "Pitt Campus Dine Optimizer",
       description:
         "Meal plans are expensive, and maximizing them is an art. Build a tool that scrapes or uses the DineOnCampus API to show what's serving where, but with a twist: optimize for nutritional value or specific dietary restrictions. It could also track current meal swipe usage and predict if a student will run out or have too many swipes left by the end of the semester.",
-      tags: ["Web Scraping", "Data Analytics", "Nutrition", "APIs", "UI/UX", "Databases", "Web Development"],
-      formLink: "https://docs.google.com/forms/d/e/1FAIpQLSeHj91HPT_wQV0j4Ho8NjFXjCte_Vy2JwKWtZr8J-DE5JfYMg/viewform?usp=sharing&ouid=104601442510228100749",
+      tags: [
+        "Web Scraping",
+        "Data Analytics",
+        "Nutrition",
+        "APIs",
+        "UI/UX",
+        "Databases",
+        "Web Development",
+      ],
+      formLink:
+        "https://docs.google.com/forms/d/e/1FAIpQLSeHj91HPT_wQV0j4Ho8NjFXjCte_Vy2JwKWtZr8J-DE5JfYMg/viewform?usp=sharing&ouid=104601442510228100749",
     },
   ]
 
